@@ -12,11 +12,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: wl
-    healthcheck:
-      test: [ "CMD", "pg_isready", "-U", "postgres" ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
   app:
     container_name: app
@@ -28,4 +23,5 @@ services:
         condition: service_healthy
     ports:
       - 8888:8888
-    command: "python main.py app"
+    command: >
+      sh -c "alembic upgrade head && python main.py app"
