@@ -1,0 +1,21 @@
+postgres:
+  db_host: localhost
+  db_port: 5435
+  db_name: wl
+  max_overflow: 1
+  pool_size: 5
+  db_user: postgres
+  db_password: postgres
+  echo: false
+
+app:
+  title: some-title
+  description: some-description
+  version: 1.0.0
+  host: localhost
+  port: 8888
+
+security:
+  password_salt: klsADE$#ad31
+  session_expire_minutes: 60
+  secret_key: gfdmhghif38yrf9ew0jkf32

@@ -1,0 +1,16 @@
+__pycache__/
+**/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*/__pycache__/
+*.pyc
+../.idea/
+*.sqlite3
+media/
+*.sock
+.sass-cache/
+.vscode/
+**/.sass-cache/
+env
+venv
+logs/*.log
